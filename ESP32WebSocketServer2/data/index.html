@@ -36,7 +36,7 @@ function wsConnect() {
     
     // Connect to WebSocket server
  //   websocket = new WebSocket(url);
-	  websock = new WebSocket('ws://' + window.location.hostname + ':8887/');
+	  websock = new WebSocket('ws://' + window.location.hostname + ':1337/');
     
     // Assign callbacks
     websocket.onopen = function(evt) { onOpen(evt) };
@@ -116,7 +116,8 @@ window.addEventListener("load", init, false);
 
 </script>
 
-<h2>LED Control</h2>
+<h2>LED Control v12345vtm</h2>
+https://github.com/v12345vtm/ESP32-Webserver-Socket-Spiffs
 
 <table>
     <tr>
