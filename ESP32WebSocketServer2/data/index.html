@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <meta charset="utf-8" />
-<title>WebSocket Test</title>
+<title>WebSocket Test33</title>
 
 <script language="javascript" type="text/javascript">
 
-var url = "ws://192.168.1.124:1337/"; //not used anyore
+var url =  'ws://' + window.location.hostname + ':1337/' ; //"ws://192.168.1.124:1337/";  // websock = new WebSocket('ws://' + window.location.hostname + ':8887/');
 var output;
 var button;
 var canvas;
@@ -28,15 +28,14 @@ function init() {
     context.fill();
     
     // Connect to WebSocket server
-    wsConnect();
+    wsConnect(url);
 }
 
 // Call this to connect to the WebSocket server
-function wsConnect() {
+function wsConnect(url) {
     
     // Connect to WebSocket server
- //   websocket = new WebSocket(url);
-	  websock = new WebSocket('ws://' + window.location.hostname + ':1337/');
+    websocket = new WebSocket(url);
     
     // Assign callbacks
     websocket.onopen = function(evt) { onOpen(evt) };
@@ -68,7 +67,7 @@ function onClose(evt) {
     button.disabled = true;
     
     // Try to reconnect after a few seconds
-    setTimeout(function() { wsConnect() }, 2000);
+    setTimeout(function() { wsConnect(url) }, 2000);
 }
 
 // Called when a message is received from the server
@@ -116,8 +115,7 @@ window.addEventListener("load", init, false);
 
 </script>
 
-<h2>LED Control v12345vtm</h2>
-https://github.com/v12345vtm/ESP32-Webserver-Socket-Spiffs
+<h2>LED Control 33</h2>
 
 <table>
     <tr>
